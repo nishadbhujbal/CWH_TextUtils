@@ -1,24 +1,12 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
 
 function App() {
   return (
     <>
-      <nav className="flex justify-between items-center w-full bg-blue-500 p-2 px-6 text-white  ">
-        <div id="name" className="font-semibold text-2xl">
-          Text Utils
-        </div>
-        <ul id="menuItems" className="flex gap-4 text-lg font-semibold">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/">About</a>
-          </li>
-          <li>
-            <a href="/">Tab</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar title="Text Utils" />
+      <TextForm heading="Enter your text to analyze" />
     </>
   );
 }
