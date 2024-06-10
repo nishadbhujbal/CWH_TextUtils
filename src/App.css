@@ -40,3 +40,7 @@
 .blank {
   color: red;
 }
+
+/* .no-scrollbar::-webkit-scrollbar {
+  display: none;
+} */
