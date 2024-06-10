@@ -1,4 +1,5 @@
 Text Utils
+
 This is a personal practice project developed using React and Tailwind CSS. It provides a user-friendly interface with various text manipulation utilities.
 
 Features:
