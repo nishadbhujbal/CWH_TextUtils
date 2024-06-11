@@ -17,20 +17,18 @@ Prerequisites: Ensure you have Node.js (version 14 or later) and npm (or yarn) i
 
 Clone the Repository: Open your terminal and navigate to your desired project directory. Then, clone this repository using Git:
 
-Bash
 git clone https://github.com/nishadbhujbal/CWH_TextUtils.git
 
 Install Dependencies: Once the cloning is complete, navigate into the project directory:
-Bash
+
 cd text-utils
 
 Install the required dependencies using npm or yarn:
-Bash
+
 npm install
 
 (or)
 
-Bash
 yarn install
 
 Development
