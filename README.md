@@ -37,12 +37,10 @@ Development
 
 Start the Development Server: Run the following command in your terminal to start the development server:
 
-Bash
 npm start
 
 (or)
 
-Bash
 yarn start
 
 This will typically launch the application in your default web browser (usually at http://localhost:3000).
