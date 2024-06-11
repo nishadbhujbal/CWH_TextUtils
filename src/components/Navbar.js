@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   return (
@@ -9,13 +9,10 @@ function Navbar(props) {
         </div>
         <ul id="menuItems" className="flex gap-4 text-lg font-semibold">
           <li>
-            <a href="/">Home</a>
+            <Link to="/TextForm">Home</Link>
           </li>
           <li>
-            <a href="/">About</a>
-          </li>
-          <li>
-            <a href="/">Tab</a>
+            <Link to="/About">About</Link>
           </li>
         </ul>
       </nav>
