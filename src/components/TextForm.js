@@ -60,25 +60,25 @@ function TextForm(props) {
 
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <button
-            className="rounded-xl font-semibold border border-blue-500 text-blue-500 bg-white px-6 py-2 hover:bg-blue-500 hover:text-white"
+            className="rounded-xl font-semibold px-6 py-2 border border-blue-500 bg-white text-blue-500 hover:bg-blue-500 hover:text-white"
             onClick={handleUpClick}
           >
             Convert to Uppercase
           </button>
           <button
-            className="rounded-xl font-semibold border border-blue-500 text-blue-500 bg-white px-6 py-2 hover:bg-blue-500 hover:text-white"
+            className="rounded-xl font-semibold px-6 py-2 border border-blue-500 bg-white text-blue-500 hover:bg-blue-500 hover:text-white"
             onClick={handleLowClick}
           >
             Convert to Lowercase
           </button>
           <button
-            className="rounded-xl font-semibold border border-blue-500 text-blue-500 bg-white px-6 py-2 hover:bg-blue-500 hover:text-white"
+            className="rounded-xl font-semibold px-6 py-2 border border-blue-500 bg-white text-blue-500 hover:bg-blue-500 hover:text-white"
             onClick={handleWhiteSpaceClick}
           >
             Remove White Spaces
           </button>
           <button
-            className="rounded-xl font-semibold border border-blue-500 text-blue-500 bg-white px-6 py-2 hover:bg-blue-500 hover:text-white"
+            className="rounded-xl font-semibold px-6 py-2 border border-blue-500 bg-white text-blue-500 hover:bg-blue-500 hover:text-white"
             onClick={handleClearClick}
           >
             Clear Text
