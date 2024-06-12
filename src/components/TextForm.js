@@ -12,6 +12,11 @@ function TextForm(props) {
     setText(newText);
   };
 
+  const handleWhiteSpaceClick = () => {
+    let newText = text.replace(/\s/g, "");
+    setText(newText);
+  };
+
   const handleClearClick = () => {
     let newText = "";
     setText(newText);
@@ -68,15 +73,21 @@ function TextForm(props) {
           </button>
           <button
             className="rounded-xl font-semibold border border-blue-500 text-blue-500 bg-white px-6 py-2 hover:bg-blue-500 hover:text-white"
+            onClick={handleWhiteSpaceClick}
+          >
+            Remove White Spaces
+          </button>
+          <button
+            className="rounded-xl font-semibold border border-blue-500 text-blue-500 bg-white px-6 py-2 hover:bg-blue-500 hover:text-white"
             onClick={handleClearClick}
           >
             Clear Text
           </button>
         </div>
 
-        <div id="preview" className="flex flex-col mx-8 mb-8">
+        <div id="preview" className="flex flex-col px-8 mb-8  w-full gap-4">
           <h2 className="text-2xl font-semibold">Preview</h2>
-          <p className="text-lg">{text}</p>
+          <p className="text-lg whitespace-pre-wrap break-words">{text}</p>
         </div>
       </div>
     </>

@@ -9,7 +9,7 @@ function Navbar(props) {
         </div>
         <ul id="menuItems" className="flex gap-4 text-lg font-semibold">
           <li>
-            <Link to="/TextForm">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/About">About</Link>

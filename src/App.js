@@ -11,7 +11,7 @@ function App() {
 
       <Routes>
         <Route
-          path="/TextForm"
+          path="/"
           element={
             <TextForm
               heading1="Enter your text to analyze"
