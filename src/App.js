@@ -28,8 +28,8 @@ function App() {
         title="Text Utils"
         mode={mode}
         textColor={textColor}
-        btnText={btnText}
         toggleMode={toggleMode}
+        btnText={btnText}
       />
 
       <Routes>
@@ -39,10 +39,18 @@ function App() {
             <TextForm
               heading1="Enter your text to analyze"
               heading2="Text Summary"
+              mode={mode}
+              textColor={textColor}
+              toggleMode={toggleMode}
             />
           }
         />
-        <Route path="/About" element={<About />} />
+        <Route
+          path="/About"
+          element={
+            <About mode={mode} textColor={textColor} toggleMode={toggleMode} />
+          }
+        />
       </Routes>
     </>
   );

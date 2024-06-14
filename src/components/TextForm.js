@@ -47,8 +47,12 @@ function TextForm(props) {
 
   return (
     <>
-      <div className="mt-20 flex flex-col items-center justify-center gap-8">
-        <div className="flex flex-col mt-8 m-4 p-2 lg:p-4 border border-black rounded-2xl lg:flex-row lg:w-[90vh] lg:h-[50vh] ">
+      <div
+        className={`mt-20 lg:mt-14 flex flex-col items-center justify-center gap-8 bg-${props.mode} text-${props.textColor}`}
+      >
+        <div
+          className={`flex flex-col mt-8 m-4 p-2 lg:p-4 border border-${props.textColor} rounded-2xl lg:flex-row lg:w-[90vh] lg:h-[50vh]`}
+        >
           <div className=" w-full lg:w-1/2 p-4 lg:border-r-2">
             <h1 className="text-xl lg:text-3xl my-2 lg:my-4 font-semibold">
               {props.heading1}
@@ -56,7 +60,7 @@ function TextForm(props) {
             <textarea
               name="text"
               id="myBox"
-              className="border border-black rounded-2xl w-full h-[170px] lg:h-1/2 pt-2 px-2 scrollbar-hide"
+              className={`border border-${props.textColor} rounded-2xl w-full h-[170px] lg:h-1/2 pt-2 px-2 scrollbar-hide`}
               value={text}
               onChange={handleOnChange}
             ></textarea>

@@ -1,11 +1,15 @@
-function About() {
+function About(props) {
   return (
     <>
-      <div className="flex items-center justify-center h-[100vh]">
-        <div className="w-full flex flex-col p-4 gap-4 mt-6 md:mt-0 md:w-1/2 md:border md:border-dashed md:border-black md:rounded-2xl">
+      <div
+        className={`flex items-center justify-center h-[100vh] bg-${props.mode} text-${props.textColor}`}
+      >
+        <div
+          className={`w-full flex flex-col p-4 gap-4 mt-6 md:mt-0 md:w-1/2 md:border md:border-dashed md:border-${props.textColor} md:rounded-2xl`}
+        >
           <h1 className="text-2xl font-semibold">About Us</h1>
           <p className="text-md flex flex-col gap-2">
-            <b>
+            <b className="text-xl">
               Text Utils: A Personal Project for Building User-Friendly Tools{" "}
             </b>
             <p>
@@ -16,7 +20,7 @@ function About() {
               different functionalities and design patterns, ultimately aiming
               to develop a collection of handy text manipulation tools.
             </p>
-            <b className="tex-xl">
+            <b className="text-xl">
               Our Mission: Empowering Users Through Text Transformation{" "}
             </b>
             <p>
@@ -25,7 +29,7 @@ function About() {
               the ability to transform their text efficiently, saving them
               valuable time and effort.
             </p>
-            <b className="tex-xl">Current Features and Ongoing Development:</b>
+            <b className="text-xl">Current Features and Ongoing Development:</b>
             <p>
               Right now, Text Utils offers basic case conversion functionalities
               (uppercase and lowercase), allowing users to easily switch between

@@ -8,7 +8,7 @@ function Navbar(props) {
       >
         <div>
           <button
-            className="text-white bg-blue-600 hover:text-blue-600 hover:bg-white rounded-xl p-2 font-semibold"
+            className="text-white bg-blue-600 rounded-xl p-2 font-semibold hover:bg-blue-600/50"
             onClick={props.toggleMode}
           >
             {props.btnText}
