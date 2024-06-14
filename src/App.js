@@ -7,15 +7,18 @@ import { useState } from "react";
 
 function App() {
   const [mode, setMode] = useState("white");
+  const [textColor, setTextColor] = useState("black");
   const [btnText, setBtnText] = useState("Enable dark mode");
 
   const toggleMode = () => {
     if (mode === "white") {
       setMode("black");
+      setTextColor("white");
       setBtnText("Enable Light Mode");
     } else {
       setMode("white");
-      setBtnText("Enable dark Mode");
+      setTextColor("black");
+      setBtnText("Enable Dark Mode");
     }
   };
 
@@ -24,6 +27,7 @@ function App() {
       <Navbar
         title="Text Utils"
         mode={mode}
+        textColor={textColor}
         btnText={btnText}
         toggleMode={toggleMode}
       />
