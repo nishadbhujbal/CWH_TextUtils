@@ -1,42 +1,17 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
-  const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-
-  const [btnText, setBtnText] = useState("Enable Dark Mode");
-
-  const toggleStyle = () => {
-    if (myStyle.color === "black") {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setBtnText("Enable Dark Mode");
-    } else {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Light Mode");
-    }
-  };
-
   return (
     <>
       <nav
-        className="fixed top-0 right-0 left-0 flex flex-col-reverse md:flex-row justify-between items-center border-b-2 w-full bg-blue-600 p-2 px-6 text-white gap-2"
-        style={myStyle}
+        className={`fixed top-0 right-0 left-0 flex flex-col-reverse md:flex-row justify-between items-center border-b-2 w-full p-2 px-6  gap-2 bg-${props.mode}`}
       >
         <div>
           <button
-            onClick={toggleStyle}
-            className="rounded-xl font-semibold p-2 border border-blue-500 bg-white text-blue-500 hover:bg-blue-500 hover:text-white"
+            className="text-white bg-blue-600 hover:text-blue-600 hover:bg-white rounded-xl p-2 font-semibold"
+            onClick={props.toggleMode}
           >
-            {btnText}
+            {props.btnText}
           </button>
         </div>
         <div className="flex flex-row justify-around md:justify-between items-center w-full md:w-1/2">

@@ -3,11 +3,30 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
+import { useState } from "react";
 
 function App() {
+  const [mode, setMode] = useState("light");
+  const [btnText, setBtnText] = useState("Enable dark mode");
+
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("black");
+      setBtnText("Enable Light Mode");
+    } else {
+      setMode("white");
+      setBtnText("Enable dark Mode");
+    }
+  };
+
   return (
     <>
-      <Navbar title="Text Utils" />
+      <Navbar
+        title="Text Utils"
+        mode={mode}
+        btnText={btnText}
+        toggleMode={toggleMode}
+      />
 
       <Routes>
         <Route
