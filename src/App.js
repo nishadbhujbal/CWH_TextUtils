@@ -6,11 +6,11 @@ import About from "./components/About";
 import { useState } from "react";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("white");
   const [btnText, setBtnText] = useState("Enable dark mode");
 
   const toggleMode = () => {
-    if (mode === "light") {
+    if (mode === "white") {
       setMode("black");
       setBtnText("Enable Light Mode");
     } else {
