@@ -15,10 +15,12 @@ function App() {
       setMode("black");
       setTextColor("white");
       setBtnText("Enable Light Mode");
+      document.body.style.backgroundColor = "#111827";
     } else {
       setMode("white");
       setTextColor("black");
       setBtnText("Enable Dark Mode");
+      document.body.style.backgroundColor = "white";
     }
   };
 
@@ -39,9 +41,9 @@ function App() {
             <TextForm
               heading1="Enter your text to analyze"
               heading2="Text Summary"
-              mode={mode}
-              textColor={textColor}
               toggleMode={toggleMode}
+              textColor={textColor}
+              mode={mode}
             />
           }
         />
