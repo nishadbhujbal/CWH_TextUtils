@@ -32,7 +32,18 @@ function TextForm(props) {
   const handleCopy = () => {
     var text = document.getElementById("myBox");
     text.select();
-    navigator.clipboard.writeText(text.value);
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard
+        .writeText(text.value)
+        .then(() => {
+          console.log("Text copied successfully!");
+        })
+        .catch((err) => {
+          console.alert("Failed to copy text: ", err);
+        });
+    } else {
+      console.log("Clipboard API not supported. Text cannot be copied.");
+    }
   };
 
   const handleClearClick = () => {
@@ -128,7 +139,7 @@ function TextForm(props) {
         <div id="preview" className="flex flex-col px-8 mb-8  w-full gap-4">
           <h2 className="text-2xl font-semibold">Preview</h2>
           <p id="para" className="text-lg whitespace-pre-wrap break-words">
-            {text}
+            {text.length > 0 ? text : "Enter something to preview it here"}
           </p>
         </div>
       </div>

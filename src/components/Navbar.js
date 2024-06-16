@@ -4,7 +4,7 @@ function Navbar(props) {
   return (
     <>
       <nav
-        className={`fixed top-0 right-0 left-0 flex flex-col-reverse md:flex-row justify-between items-center border-b-2 w-full p-2 px-6  gap-2 bg-${props.mode} text-${props.textColor}`}
+        className={`absolute top-0 right-0 left-0 flex flex-col-reverse md:flex-row justify-between items-center border-b-2 w-full p-2 px-6  gap-2 bg-${props.mode} text-${props.textColor}`}
       >
         <div>
           <button
