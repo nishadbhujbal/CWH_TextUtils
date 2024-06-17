@@ -3,12 +3,21 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
+import Alert from "./components/Alert";
 import { useState } from "react";
 
 function App() {
   const [mode, setMode] = useState("white");
   const [textColor, setTextColor] = useState("black");
   const [btnText, setBtnText] = useState("Enable dark mode");
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type,
+    });
+  };
 
   const toggleMode = () => {
     if (mode === "white") {
@@ -16,11 +25,13 @@ function App() {
       setTextColor("white");
       setBtnText("Enable Light Mode");
       document.body.style.backgroundColor = "#111827";
+      showAlert("Dark mode activated", "Success");
     } else {
       setMode("white");
       setTextColor("black");
       setBtnText("Enable Dark Mode");
       document.body.style.backgroundColor = "white";
+      showAlert("Dark mode activated", "Success");
     }
   };
 
@@ -33,6 +44,7 @@ function App() {
         toggleMode={toggleMode}
         btnText={btnText}
       />
+      <Alert alert={alert} />
 
       <Routes>
         <Route
@@ -44,6 +56,7 @@ function App() {
               toggleMode={toggleMode}
               textColor={textColor}
               mode={mode}
+              showAlert={showAlert}
             />
           }
         />
