@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
+import ColorPalette from "./components/ColorPalette";
 import { useState } from "react";
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
         toggleMode={toggleMode}
         btnText={btnText}
       />
-
+      <ColorPalette />
       <Routes>
         <Route
           path="/"
