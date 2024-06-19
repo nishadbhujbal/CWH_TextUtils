@@ -31,7 +31,7 @@ function App() {
       setTextColor("black");
       setBtnText("Enable Dark Mode");
       document.body.style.backgroundColor = "white";
-      showAlert("Dark mode activated", "Success");
+      showAlert("Light mode activated", "Success");
     }
   };
 

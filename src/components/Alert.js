@@ -8,12 +8,13 @@ const handleClose = () => {
 function Alert(props) {
   return (
     <>
+      props.alert &&
       <div
         id="alertBox"
         className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-14"
         role="alert"
       >
-        <strong>{props.alert.type}</strong>:{props.alert.msg}
+        <strong>{props.alert.type}</strong>: {props.alert.msg}
         <span
           className="absolute top-0 bottom-0 right-0 px-4 py-3"
           onClick={handleClose}
