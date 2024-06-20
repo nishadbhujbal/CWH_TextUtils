@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
-import ColorPalette from "./components/ColorPalette";
 import { useState } from "react";
 
 function App() {
@@ -17,11 +16,13 @@ function App() {
       setTextColor("white");
       setBtnText("Enable Light Mode");
       document.body.style.backgroundColor = "#111827";
+      document.title = "Text Utils - Dark Mode";
     } else {
       setMode("white");
       setTextColor("black");
       setBtnText("Enable Dark Mode");
       document.body.style.backgroundColor = "white";
+      document.title = "Text Utils - Light Mode";
     }
   };
 
@@ -34,7 +35,6 @@ function App() {
         toggleMode={toggleMode}
         btnText={btnText}
       />
-      <ColorPalette />
       <Routes>
         <Route
           path="/"
