@@ -2,7 +2,7 @@ function About(props) {
   return (
     <>
       <div
-        className={`flex items-center justify-center h-[100vh] bg-${props.mode} text-${props.textColor}`}
+        className={`mt-20 md:mt-0 flex items-center justify-center h-[100vh] bg-${props.mode} text-${props.textColor}`}
       >
         <div
           className={`w-full flex flex-col p-4 gap-4 mt-6 md:mt-0 md:w-1/2 md:border md:border-dashed md:border-${props.textColor} md:rounded-2xl`}

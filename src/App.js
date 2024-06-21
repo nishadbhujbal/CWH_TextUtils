@@ -9,14 +9,6 @@ function App() {
   const [mode, setMode] = useState("white");
   const [textColor, setTextColor] = useState("black");
   const [btnText, setBtnText] = useState("Enable dark mode");
-  const [alert, setAlert] = useState(null);
-
-  const showAlert = (message, type) => {
-    setAlert({
-      msg: message,
-      type: type,
-    });
-  };
 
   const toggleMode = () => {
     if (mode === "white") {
@@ -45,6 +37,7 @@ function App() {
       />
       <Routes>
         <Route
+          exact
           path="/"
           element={
             <TextForm
@@ -53,11 +46,11 @@ function App() {
               toggleMode={toggleMode}
               textColor={textColor}
               mode={mode}
-              showAlert={showAlert}
             />
           }
         />
         <Route
+          exact
           path="/About"
           element={
             <About mode={mode} textColor={textColor} toggleMode={toggleMode} />
